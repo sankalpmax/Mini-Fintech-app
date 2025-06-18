@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini FinBank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Mini FinBank</h1>
+    <a href="/register">Register New User</a>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.full_name }} - ₹{{ user.balance }} - {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
